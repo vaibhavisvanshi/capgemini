@@ -1,0 +1,42 @@
+package pack;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Main2 {
+	public static void main(String[] args) {
+		List<Integer> list1 = new ArrayList<Integer>();
+		int sum=0;
+		list1.add(25);
+		list1.add(32);
+		list1.add(23);
+		list1.add(45);
+		System.out.println("size: "+list1.size());
+		System.out.println();
+		System.out.println(list1.get(0));
+		System.out.println(list1.get(1));
+		System.out.println(list1.get(2));
+		System.out.println(list1.get(3));
+		System.out.println();
+		for (Object o : list1) {
+			System.out.println(o);
+		}
+		System.out.println();
+		System.out.println(list1);
+		list1.contains(23);
+		//System.out.println(list1.addAll(list1));
+		System.out.println(list1.contains(23));
+		System.out.println(list1.contains(26));
+		int len=list1.size();
+		for(Integer n:list1) {
+			 sum=sum+n;
+		}
+		System.out.println("sum: "+sum);
+		int avg=sum/len;
+		System.out.println("avg:"+avg);
+		float avg1=(float)sum/len;
+		System.out.println("avg in float:"+avg1);
+		
+	}
+
+}

@@ -1,0 +1,40 @@
+package pack2;
+
+import java.util.Scanner;
+
+//JAN 31
+class Array {
+	int[] anArray;
+	Scanner sc;
+	float avg = 0;
+
+	Array() {
+		sc=new Scanner(System.in);
+		anArray = new int[5];
+		System.out.println(anArray.length);
+		for (int i = 0, j = anArray.length; i < j; i++) {
+			System.out.println("enter val for index " + i);
+			anArray[i] = sc.nextInt();
+
+		}
+		for (int i = 0, j = anArray.length; i < j; i++) {
+			avg = avg + anArray[i];
+		}
+		avg = (float) avg / anArray.length;
+
+		System.out.println(avg);
+
+	
+	}
+}
+
+public class Main {
+
+	public static void main(String[] args) {
+		Array a = new Array();
+		System.out.println(a.anArray.length);
+		
+
+	}
+
+}

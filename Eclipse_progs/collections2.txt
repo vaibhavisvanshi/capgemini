@@ -1,0 +1,46 @@
+package pack;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
+public class Main2 {
+	public static void main(String[] args) {
+		List<Float> list1 = new ArrayList<>();
+
+		list1.add(25f);
+		list1.add(32f);
+		list1.add(23f);
+		list1.add(45f);
+                System.out.println(list1);
+		float avg = 0.0f;
+		for (Float n : list1) {
+			avg = avg + n;
+		}
+		avg = avg / list1.size();
+		System.out.println("avg: " + avg);
+		//1 meth
+		for (Object n : list1) {
+			System.out.println(n);
+			
+		}
+		System.out.println();
+		//2 meth
+		Iterator<Float> itr = list1.iterator();
+		while (itr.hasNext()) {
+			System.out.println(itr.next());
+                	System.out.println();
+		/*Iterator<Float> itr2 = list1.iterator();
+		if (itr2.hasNext()) {
+			System.out.println(itr2.next());// only one printed
+		}
+		System.out.println(itr2.next());
+		System.out.println(itr2.next());
+		System.out.println(itr2.next());
+		System.out.println(itr2.next());// NoSuchElementexception
+		// use while instead
+*/
+		}
+	}
+
+}

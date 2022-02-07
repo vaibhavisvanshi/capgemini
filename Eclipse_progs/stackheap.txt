@@ -1,0 +1,28 @@
+package pack2;
+//JAN 31
+
+class Addition {
+	private int n1;
+	private int n2;
+
+	Addition() {
+		n1 = 10;
+		n2 = 650;
+	}
+
+	public void display() {
+		int result = n1 + n2;
+		System.out.println(result);
+
+	}
+}
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method 
+Addition addition =new Addition();
+addition.display();
+
+	}
+
+}

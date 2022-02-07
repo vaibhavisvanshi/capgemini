@@ -1,0 +1,41 @@
+package pack;
+
+import java.util.Scanner;
+
+public class Mainn {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int age_person1=sc.nextInt();
+		int age_person2=sc.nextInt();
+		int age_person3=sc.nextInt();
+		int young=0,old=0;
+		
+		if (age_person1<age_person2 && age_person1<age_person3 ) {
+			young=age_person1;
+
+		} 
+		else if(age_person2<age_person3)
+		{
+			young=age_person2;
+		}
+		else {
+			young=age_person3;
+		}
+		if (age_person1>age_person2 && age_person1>age_person3 ) {
+			old=age_person1;
+
+		} 
+		else if(age_person2>age_person3)
+		{
+			old=age_person2;
+		}
+		else {
+			old=age_person3;
+		}
+		System.out.println("Older :"+old );
+		System.out.println("Younger :"+young );
+
+	}
+
+}

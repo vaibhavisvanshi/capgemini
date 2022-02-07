@@ -1,0 +1,10 @@
+package pack1;
+
+public class Superclass {
+	 public Superclass() {
+			System.out.println("Super class constructor");
+		}
+		public void display() {
+			System.out.println("Superclass");
+			}
+}

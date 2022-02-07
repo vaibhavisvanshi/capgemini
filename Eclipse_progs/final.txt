@@ -1,0 +1,19 @@
+package pack;
+
+final class Person{
+	 final 	public void disp() {
+		System.out.println("displayy meth");
+	}
+}
+class Employee extends Person{
+	public void disp() {
+		
+	}
+}
+public class Main2 {
+
+	public static void main(String[] args) {
+		new Person();//immutable instance- state cant be changed
+	}
+
+}

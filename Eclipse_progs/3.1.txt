@@ -1,0 +1,21 @@
+package pack;
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+	int	yearsOfService;
+	double salary,bonus=0.0;
+	Scanner sc=new Scanner(System.in);
+	System.out.println("salary:");
+	salary=sc.nextDouble();
+	System.out.println("years of service:");
+	yearsOfService=sc.nextInt();
+	if(yearsOfService>=5) {
+		bonus=0.05*salary;		
+	}
+	System.out.println("bonus:"+bonus);
+	}
+
+}

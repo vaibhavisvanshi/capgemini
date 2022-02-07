@@ -1,0 +1,30 @@
+package pack;
+
+
+import java.util.Stack;
+
+public class Main2 {
+	public static void main(String[] args) {
+		Stack<Object> list1 = new Stack<>();
+		
+		list1.add("Vaii");
+		list1.add("Varun");
+		list1.add("Vinitha");
+		list1.add("Viya");
+		System.out.println(	list1.isEmpty());
+		list1.push(10);//at 4th index
+		list1.push(15);
+		list1.push(20);
+		list1.push(25);
+		list1.push(30);
+		System.out.println(list1);
+		System.out.println(list1.peek());//return element head val displayed
+		System.out.println(list1);	
+		System.out.println("the removed element is "+list1.pop());//30removed
+		System.out.println(list1);
+		System.out.println(list1.search(10));//4
+		list1.pop();
+	
+	}
+
+}

@@ -1,0 +1,20 @@
+package pack2;
+
+//JAN 31
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		int age = 17;
+		String name="vaiii";
+		boolean status = (age>=18) && name.equals("vaiii");
+		System.out.println(status);
+		status=age>=18 || name.equals("vaiii");
+		System.out.println(status);
+status= !(age>=18);
+System.out.println(status);
+	
+
+	}
+}

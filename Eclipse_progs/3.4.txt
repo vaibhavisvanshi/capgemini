@@ -1,0 +1,20 @@
+package pack;
+
+public class Mainn {
+
+	public static void main(String[] args) {
+		int x = 2, y = 5, z = 0;
+		boolean b = x == 0;
+		System.out.println(b);
+		boolean b1 = x != 5;
+		System.out.println(b1);
+		boolean b2 = (x != 5 && y >= 5);
+		System.out.println(b2);
+		boolean b3 = (z != 0 || x == 2);
+		System.out.println(b3);
+		boolean b4 = !(y < 10);
+		System.out.println(b4);
+
+	}
+
+}

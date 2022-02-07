@@ -1,0 +1,28 @@
+package pack1;
+
+import java.util.Date;
+import java.awt.*;
+//import java.util.Scanner;
+
+public class Variables1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int x = 1, y;
+		y = x;
+		System.out.println("xvalue:" + x + " yvalue:" + y);
+		//
+		Date now = new Date();
+		System.out.println(now);
+		//
+		// Point point1=new Point(a: 1,b: 1);
+		// Point point2=point1;
+		// point1.a=2;
+		// System.out.println(point2);
+		// Scanner scan = new Scanner(System.in);
+		// age = scan.nextInt();
+		// System.out.println("Age of Ram is" + age);
+
+	}
+
+}

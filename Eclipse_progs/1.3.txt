@@ -1,0 +1,14 @@
+package pack;
+
+public class Main {
+
+	public static void main(String[] args) {
+		int num1,num2,quotient;
+		num1=45;
+		num2=5;
+		quotient=num1/num2;
+		System.out.println("quotient is "+quotient);
+
+	}
+
+}

@@ -1,0 +1,41 @@
+package pack;
+
+class A
+{
+
+	public void proA() throws ArithmeticException{
+		int x=8/0;
+	}
+}
+
+class B
+{
+
+	public void proB() throws ArithmeticException{
+		System.out.println("proB");
+		new A().proA();
+	}
+}
+
+class C
+{
+
+	public void proC() throws ArithmeticException{
+		System.out.println("proC");
+		new B().proB();
+	}
+}
+
+public class Main2 {
+
+	public static void main(String[] args) {
+		System.out.println("start");
+		try {
+			new C().proC();
+		} catch (ArithmeticException e) {
+			System.out.println(e);
+		}
+		System.out.println("end");
+	}
+
+}

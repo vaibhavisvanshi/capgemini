@@ -1,0 +1,37 @@
+package pack;
+
+import java.time.Duration;
+import java.time.LocalTime;
+import java.time.ZoneId;
+import java.time.temporal.ChronoUnit;
+
+public class Main2 {
+
+	public static void main(String[] args) {
+		ZoneId zone1=ZoneId.of("Asia/Kolkata");
+		ZoneId zone2=ZoneId.of("Asia/Tokyo");
+		LocalTime time1=LocalTime.now(zone1);
+		System.out.println("indian time zone: "+time1);
+		LocalTime time2=LocalTime.now(zone2);
+		System.out.println("japan's time zone: "+time2);
+		
+		Duration duration =Duration.between(time1, time2);
+		System.out.println(duration);
+		Duration duration1 =Duration.between(time2, time1);
+		System.out.println(duration1);//MINUS
+		
+		long hours=ChronoUnit.HOURS.between(time1, time2);
+		System.out.println("hours between 2 timezones:  "+hours);
+		long minutes=ChronoUnit.MINUTES.between(time1, time2);
+		System.out.println("minutes between 2 timezones:  "+minutes);
+		long seconds=ChronoUnit.SECONDS.between(time1, time2);
+		System.out.println("seconds between 2 timezones:  "+seconds);
+		
+		long hToM=60*hours;
+		long actualMinutes=minutes-hToM;
+		System.out.println("time diff is "+hours+" Hours & "+actualMinutes+" Minutes");
+		
+		
+		
+	}
+}

@@ -1,0 +1,20 @@
+package pack2;
+
+
+
+//JAN 31
+
+public class Main {
+
+	public static void main(String[] args) {
+	String[][] arrayy= {{"Mr.","Ms.","Mrs."},{"Jones","Smith"}} ;
+		System.out.println(arrayy[0][0]+arrayy[1][0]);
+		System.out.println(arrayy[0][0]+arrayy[1][1]);
+		System.out.println(arrayy[0][1]+arrayy[1][0]);
+		System.out.println(arrayy[0][1]+arrayy[1][1]);
+		System.out.println(arrayy[0][2]+arrayy[1][0]);
+		System.out.println(arrayy[0][2]+arrayy[1][1]);
+
+	}
+
+}

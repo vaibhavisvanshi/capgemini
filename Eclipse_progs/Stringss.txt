@@ -1,0 +1,25 @@
+package pack1;
+
+public class Stringss {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String message = "  Helloworld  " + "!!";
+		String message1 = " Helloworld  \"Vaii\"";
+
+		System.out.println(message);
+		System.out.println(message.length());
+		System.out.println(message.endsWith("!!"));
+		System.out.println(message.indexOf("w"));
+		System.out.println(message.indexOf("Z"));
+		System.out.println(message.indexOf("k"));
+		System.out.println(message.replace("w", "llo"));
+		System.out.println(message);
+		System.out.println(message.toLowerCase());
+		System.out.println(message.trim());
+		System.out.println(message1);
+
+
+	}
+
+}

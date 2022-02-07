@@ -1,0 +1,26 @@
+package pack;
+
+class PrimeThread extends Thread{
+	int n;
+	PrimeThread(int n){
+		this.n=n;
+	}
+	public void run() {
+	
+		System.out.println(Thread.currentThread().getName()+" "+n);
+	}
+	
+}
+
+public class Mainn {
+
+	public static void main(String[] args) {
+		System.out.println(Thread.currentThread().getName());//main
+		PrimeThread t1=new PrimeThread(25);
+		t1.start();
+		PrimeThread t2=new PrimeThread(30);
+		t2.start();
+		
+		}
+	}
+

@@ -1,0 +1,36 @@
+package pack;
+
+import java.util.LinkedList;
+import java.util.List;
+
+class CountriesName {
+	List<String> countries = new LinkedList<>();
+
+	public CountriesName() {
+
+		countries.add("India");
+		countries.add("Canada");
+		countries.add("egypt");
+		countries.add("china");
+		countries.add("korea");
+		countries.add("france");
+		countries.add(1, "thailand");
+		countries.add("bragil");
+		countries.remove(1);
+		countries.set(6, "brazil");
+	}
+
+	public void printList() {
+		for (String n : countries) {
+			System.out.println(n);
+		}
+	}
+}
+
+public class Mainn {
+
+	public static void main(String[] args) {
+		new CountriesName().printList();
+
+	}
+}

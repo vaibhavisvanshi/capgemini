@@ -1,0 +1,28 @@
+package pack;
+class ABC{}
+class PrimeThread  extends ABC implements Runnable {
+	int n;
+	PrimeThread(int n){
+		this.n=n;
+	}
+	public void run() {
+	
+		System.out.println(Thread.currentThread().getName()+" "+n);
+	}
+	
+}
+
+public class Mainn {
+
+	public static void main(String[] args) {
+		System.out.println(Thread.currentThread().getName());//main
+		PrimeThread t1=new PrimeThread(25);
+		Thread th1=new Thread(t1);
+		th1.start();
+		PrimeThread t2=new PrimeThread(36);
+		Thread th2=new Thread(t2);
+		th2.start();
+		new Thread(new PrimeThread(40)).start();
+		}
+	}
+

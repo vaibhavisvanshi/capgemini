@@ -1,0 +1,65 @@
+package pack2;
+
+
+
+//JAN 31
+
+public class Main {
+
+	public static void main(String[] args) {
+int g,h;
+int a=67;
+int b=32;
+int c=2;
+int d=3;
+int e=4;
+int f=5;
+System.out.println(a+b);
+System.out.println(a-f);
+System.out.println(c/d);
+System.out.println(c*e);
+System.out.println(a/b);
+System.out.println((float)(a/b));
+System.out.println(a%b);
+a=1;
+g=a++;
+System.out.println(a+" "+g);
+a=1;
+g=++a;
+System.out.println(a+" "+g);
+a=1;
+h=a--;
+System.out.println(a+" "+h);
+a=1;
+h=--a;
+System.out.println(a+" "+h);
+System.out.println(a+" "+h);
+System.out.println();
+System.out.println("rshift"+(c>>1));
+System.out.println("lshift"+(c<<2));
+System.out.println();
+System.out.println("bit or"+(c|d));
+System.out.println("bit and"+(c&d));
+System.out.println("bit xor"+(c^d));
+System.out.println();
+
+
+System.out.println(x);
+System.out.println(!(x));
+System.out.println();
+
+a=8;
+b=7;
+boolean result=(b>=a);
+System.out.println(result);
+result=(b==a);
+System.out.println(result);
+result=(b<=a);
+System.out.println(result);
+
+
+
+
+	}
+
+}

@@ -1,0 +1,20 @@
+package pack1;
+
+public class Variables {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int age = 25, herAge = 21;
+		long viewsCount = 2_234_567_765L;
+		float pi = 3.14f;
+		char letter = 'a';
+		System.out.println(age);
+		System.out.println("The age of Ram is " + age);
+		System.out.println(herAge);
+		System.out.println("The age of Radha is " + herAge);
+		System.out.println(viewsCount);
+		System.out.println(pi);
+		System.out.println(letter);
+	}
+
+}

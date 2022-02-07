@@ -1,0 +1,47 @@
+package pack;
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class Main2 {
+
+	public static void main(String[] args) {
+
+		String data = "YOU NEED TO LEARN JAVASE,THEN JAVAEE.";
+		String regex1 = "\\bJAVA";
+		Pattern p1 = Pattern.compile(regex1, Pattern.CASE_INSENSITIVE);
+		Matcher m1 = p1.matcher(data);
+		while (m1.find()) {
+			System.out.println("start index: " + m1.start());
+			System.out.println("end index: " + m1.end());//2
+			
+		}
+		String data2 = "YOU NEED TO LEARN JAVASE,THEN EEJAVA.";
+		String regex2 = "\\bJAVA";
+		Pattern p2 = Pattern.compile(regex2, Pattern.CASE_INSENSITIVE);
+		Matcher m2 = p2.matcher(data2);
+		while (m2.find()) {
+			System.out.println("start index: " + m2.start());
+			System.out.println("end index: " + m2.end());//1
+		}
+		String data3 = "YOU NEED TO LEARN JAVASE,THEN JAVAEE.";
+		String regex3 = "\\BJAVA";
+		Pattern p3 = Pattern.compile(regex3, Pattern.CASE_INSENSITIVE);
+		Matcher m3 = p3.matcher(data3);
+		while (m3.find()) {
+			System.out.println("start index: " + m3.start());
+			System.out.println("end index: " + m3.end());//NO OP
+			
+		}
+		String data4 = "YOU NEED TO LEARN JAVASE,THEN EEJAVA.";
+		String regex4 = "\\BJAVA";
+		Pattern p4 = Pattern.compile(regex4, Pattern.CASE_INSENSITIVE);
+		Matcher m4 = p4.matcher(data4);
+		while (m4.find()) {
+			System.out.println("start index: " + m4.start());
+			System.out.println("end index: " + m4.end());//1
+			
+		}
+	}
+
+}

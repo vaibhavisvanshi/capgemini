@@ -1,0 +1,33 @@
+package pack;
+
+class AgeValidator{
+	int age;
+	public AgeValidator() {
+		age=17;
+	}
+	public void pro() throws ArithmeticException{
+		if(age<18)
+		{
+			throw new ArithmeticException("age is not validated");
+		}
+		else {
+			System.out.println("age is validated");
+		}
+	}
+	}
+
+public class Main2 {
+
+	public static void main(String[] args) {
+		System.out.println("start main");
+		try {
+			new AgeValidator().pro();
+		}
+		catch(ArithmeticException e) {
+			System.out.println(e);
+			System.out.println(e.getMessage());
+		}
+		System.out.println("main end");
+	}
+
+}

@@ -1,0 +1,17 @@
+package pack;
+
+
+import java.time.LocalTime;
+
+public class Main2 {
+
+	public static void main(String[] args) {
+	
+		LocalTime time1=LocalTime.of(10, 45, 9);
+		System.out.println(time1);
+		LocalTime time2=time1.minusHours(2);
+		LocalTime time3=time1.plusMinutes(34);
+		LocalTime time4=time2.plusMinutes(34);
+		System.out.println("time1 "+time1+" time2 "+time2+"time3 "+time3+"time4 "+time4);
+	}
+}

@@ -1,0 +1,36 @@
+package pack;
+
+
+public class Main2 {
+	
+
+	public static void main(String[] args) throws Exception{
+		
+		System.out.println("start");
+		int x=12,n=0,result=0;
+		try {
+			System.out.println("start");
+		result=x/n;
+		System.out.println("end");
+		}
+		catch(NullPointerException e) {
+			System.out.println(e);
+		
+		} 
+               catch(ArithmeticException e) {
+			System.out.println(e);
+		
+		}
+		finally {
+			System.out.println("finally clause");
+		}
+		System.out.println(result);
+		System.out.println("heyyyy");
+	try {
+			FileReader file= new FileReader("");
+		} catch (FileNotFoundException e) {
+			
+		}
+	}
+
+}

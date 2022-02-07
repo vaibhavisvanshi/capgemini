@@ -1,0 +1,39 @@
+package pack2;
+
+
+
+//JAN 31
+class Array {
+	int[] anArray;
+	
+	float avg = 0;
+
+	Array() {
+		anArray = new int[5];
+		float avg, avg1;
+		anArray[0] = 19;
+		anArray[1] = 11;
+		anArray[2] = 3;
+		anArray[3] = 54;
+		System.out.println(anArray[0]);
+		System.out.println(anArray[1]);
+		System.out.println(anArray[2]);
+		System.out.println(anArray[3]);
+		avg = (float) (anArray[0] + anArray[1] + anArray[2] + anArray[3]) / 4;
+		avg1 = (float) (anArray[0] + anArray[1] + anArray[2] + anArray[3]) / anArray.length;
+		System.out.println(avg);
+		System.out.println(avg1);
+
+	}
+}
+
+public class Main {
+
+	public static void main(String[] args) {
+		Array a = new Array();
+		System.out.println(a.anArray.length);
+		// System.out.println(Array Arrays.toString(a.anArray));
+
+	}
+
+}

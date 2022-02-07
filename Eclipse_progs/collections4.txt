@@ -1,0 +1,29 @@
+package pack;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
+public class Main2 {
+	public static void main(String[] args) {
+		List<String> list1 = new ArrayList<>();
+		List<String> list2 = new ArrayList<>();
+		list1.add("Vaii");
+		list1.add("Varun");
+		list1.add("Vinitha");
+		list1.add("Viya");
+		System.out.println(list1);
+             String[] names = list1.toArray(new String[0]);
+		for (String name : names)
+			System.out.println(name);
+		list2.add("Varun");
+		list2.add("Vinitha");
+		System.out.println(list2);
+		System.out.println(list1.contains("Vishii"));
+		System.out.println(list1.contains(list2));//f
+		System.out.println(list1.containsAll(list2));
+
+	}
+	
+
+}

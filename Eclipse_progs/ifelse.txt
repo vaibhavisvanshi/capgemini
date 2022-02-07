@@ -1,0 +1,42 @@
+package pack2;
+
+//JAN 31
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		int age = 17;
+// only if
+		if (age >= 12) {
+			System.out.println("true");
+		}
+		// normal statement
+		System.out.println("heyy");
+//if-else
+		if (age >= 18) {
+			System.out.println("true");
+		} else {
+			System.out.println("false");
+		}
+//2
+
+String name="Lalit";
+//if-else
+		if (name.equals("Lalit")) {
+			System.out.println("name is "+name);
+		} 
+		else {
+			System.out.println("invalid name");
+		}
+//if-else ladder
+		if (age == 17) {
+			System.out.println("equal");
+		} else if (age >= 18) {
+			System.out.println("true");
+		} else {
+			System.out.println("false");
+		}
+
+	}
+}

@@ -1,0 +1,23 @@
+package pack1;
+
+class Outerclass {
+	private int num;
+	private static int num2;
+
+	static class Nestedclass {
+		public void staticDisplay() {
+			num2 = 25;
+			System.out.println(num2);
+		}
+	}
+}
+
+public class InnerclassMain {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Outerclass.Nestedclass nest = new Outerclass.Nestedclass();
+		nest.staticDisplay();
+	}
+
+}

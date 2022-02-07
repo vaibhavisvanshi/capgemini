@@ -1,0 +1,22 @@
+package pack;
+
+import java.util.ArrayList;
+
+import java.util.List;
+
+public class Main2 {
+	public static void main(String[] args) {
+		List<Object> list1 = new ArrayList<>();
+
+		list1.add(25f);
+		list1.add(32);
+		list1.add("heyy");
+		list1.add(4.5f);
+		list1.add(8.4);
+		System.out.println("list is: " + list1);
+		for (Object n : list1) {
+			System.out.println(n);
+		}
+
+	}
+}

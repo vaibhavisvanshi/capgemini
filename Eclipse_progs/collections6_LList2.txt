@@ -1,0 +1,49 @@
+package pack;
+
+import java.util.LinkedList;
+import java.util.List;
+
+class CodeNo {
+	List<Integer> code = new LinkedList<>();
+
+	public CodeNo() {
+		code.add(2);
+		code.add(4);
+		code.add(6);
+		code.add(8);
+		code.add(7);
+		code.add(3);
+		code.add(1);
+		System.out.println(code);
+		code.add(1, 5);
+		System.out.println(code);
+		code.clear();
+		code.add(2);
+		code.add(4);
+		code.add(6);// index2
+		code.add(8);
+		code.add(7);
+		code.add(3);
+		code.add(1);
+		System.out.println(code);
+		code.remove(2);// removes index 2
+		System.out.println(code);
+		code.remove(new Integer(2));// removes val 2
+		System.out.println(code);
+
+	}
+
+	public void printList() {
+		for (Integer n : code) {
+			System.out.println(n);
+		}
+	}
+}
+
+public class Mainn {
+
+	public static void main(String[] args) {
+		new CodeNo().printList();
+
+	}
+}

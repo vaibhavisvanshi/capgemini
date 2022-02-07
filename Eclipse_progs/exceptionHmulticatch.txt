@@ -1,0 +1,33 @@
+package pack;
+
+public class Main3 {
+
+	public static void main(String[] args) {
+		int x = 12, n = 0, result = 0;
+		try {
+			System.out.println("starttt of main");
+			result = x / n;
+
+		} catch (ArithmeticException e) {
+			System.out.println(e);
+		} catch (NullPointerException e) {
+			System.out.println(e);
+		} catch (Exception e) {
+			System.out.println(e);
+		}
+		System.out.println(result);
+		try {
+			System.out.println("starttt of main");
+			result = x / n;
+
+		} catch (ArithmeticException | NullPointerException e) {
+			System.out.println(e);
+		} catch (Exception e) {
+			System.out.println(e);
+		}
+
+		System.out.println("end main");
+	}
+
+}
+

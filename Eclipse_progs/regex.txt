@@ -1,0 +1,105 @@
+package pack;
+
+import java.util.regex.Pattern;
+
+public class Main2 {
+
+	public static void main(String[] args) {
+
+		System.out.println(Pattern.matches(".s", "as"));//t
+		System.out.println(Pattern.matches(".s", "mk"));// f
+		System.out.println(Pattern.matches(".s", "mst"));// f
+		System.out.println(Pattern.matches(".s", "amms"));// f
+		System.out.println(Pattern.matches(".s", "ls"));//t
+		System.out.println(Pattern.matches("..s", "mas"));//t
+
+// character class
+		System.out.println(Pattern.matches("[abc]", "1234"));//f
+		System.out.println(Pattern.matches("[abc]", "hnsj"));//f
+		System.out.println(Pattern.matches("[abc]", "amma"));//f
+		System.out.println(Pattern.matches("[abc]", "a"));//t
+		System.out.println(Pattern.matches("[^abc]", "b"));// ^except a/b/c
+		System.out.println(Pattern.matches("[^abc]", "p"));// t
+		System.out.println(Pattern.matches("[a-zA-Z]", "p"));// any 1 among them //true
+		System.out.println(Pattern.matches("[A-Z]", "p"));// f
+		System.out.println();
+
+		System.out.println(Pattern.matches("[a-d[m-p]]", "e"));//f- union of a-d and m-p
+		System.out.println(Pattern.matches("[a-d[m-p]]", "c"));// t
+		System.out.println(Pattern.matches("[a-z&&[def]]", "d"));// t//common-intersection- d or e or f
+		System.out.println(Pattern.matches("[a-z&&[def]]", "p"));// f
+		System.out.println(Pattern.matches("[a-z]||[a-p]]", "e"));// t for all a-z
+		System.out.println(Pattern.matches("[a-z]||[123]]", "4"));// f
+		System.out.println(Pattern.matches("[a-z]||[123]", "3"));// t
+		System.out.println(Pattern.matches("[a-z&&[^def]]", "d"));// f def should not be there
+		System.out.println();
+
+// quantifiers
+		// x?-once or not at all
+		System.out.println(Pattern.matches("a?", ""));// t
+		System.out.println(Pattern.matches("[abc]?", "b"));// t
+		System.out.println(Pattern.matches("[abc]?", "m"));// f
+		System.out.println(Pattern.matches("[abc]?", "mn"));//f
+		System.out.println(Pattern.matches("[abc]?", "bb"));// f
+		System.out.println();
+		// x+-once or more
+		System.out.println(Pattern.matches("a+", ""));// f
+		System.out.println(Pattern.matches("[abc]+", "b"));// t
+		System.out.println(Pattern.matches("[abc]+", "m"));// f
+		System.out.println(Pattern.matches("[abc]+", "mn"));//f
+		System.out.println(Pattern.matches("[abc]+", "bb"));// t
+		System.out.println();
+		//x*-  0 or more
+                System.out.println(Pattern.matches("a*", ""));// t
+		System.out.println(Pattern.matches("[abc]*", "b"));// t
+		System.out.println(Pattern.matches("[abc]*", "m"));// f
+		System.out.println(Pattern.matches("[abc]*", "mn"));//f
+		System.out.println(Pattern.matches("[abc]*", "bb"));// t
+		System.out.println();
+		//x{n}- x ntimes
+		//x{n,m}- x n-m times
+		System.out.println(Pattern.matches("a{0}", ""));// t
+		System.out.println(Pattern.matches("[1-9]{4}", "1254"));// t
+		System.out.println(Pattern.matches("[1-9]{4}", "124"));// f
+		System.out.println(Pattern.matches("[1-9]{2,5}", "124"));//t
+		System.out.println(Pattern.matches("[a-z]{2,5}", "vaibhavi"));// f
+		System.out.println();
+//meta characters
+		System.out.println(Pattern.matches("\\d", "a"));//f not digit
+		System.out.println(Pattern.matches("\\d", "abc"));//f not digit-multiple
+		System.out.println(Pattern.matches("\\d", "1"));//T  digit
+		System.out.println(Pattern.matches("\\d", "123"));//f multiple digit
+		System.out.println(Pattern.matches("\\D", "a"));//t not digit
+		System.out.println(Pattern.matches("\\D", "abc"));//f multiple
+		System.out.println(Pattern.matches("\\D", "1"));//f  digit
+		System.out.println(Pattern.matches("\\D", "123"));//f not digit -multiple
+	        System.out.println();
+		
+		System.out.println(Pattern.matches("\\s", " "));//T
+		System.out.println(Pattern.matches("\\s", "abc"));//f multiple
+		System.out.println(Pattern.matches("\\s", "1"));//f
+		System.out.println(Pattern.matches("\\s", "12 3"));//f multiple 
+		System.out.println(Pattern.matches("\\S", " "));//f 
+		System.out.println(Pattern.matches("\\S", "abc"));//f multiple
+		System.out.println(Pattern.matches("\\S", "1"));//t  
+		System.out.println(Pattern.matches("\\S", "12 3"));//f -multiple
+		System.out.println();
+		//
+		System.out.println(Pattern.matches("\\d{7,10}", "9672634"));//t
+		System.out.println(Pattern.matches("\\D{10}", "gfggzsjjhd"));//T
+
+                //w for alphabets and digits
+		System.out.println(Pattern.matches("\\w+", "vaibhavi@gmail.com"));//f
+		System.out.println(Pattern.matches("\\w+", "vaibhavigmail.com"));//f
+		System.out.println(Pattern.matches("\\w+", "vaibhavigmailcom"));//t
+		System.out.println(Pattern.matches("\\w+", "vaibhavi6gmailcom"));//t
+		System.out.println(Pattern.matches("\\w+\\@+\\w+\\.\\w+", "vaibhavi@gmail.com"));//t
+		System.out.println(Pattern.matches("\\w+\\@+\\w+\\.\\w+", "vaibhavi6@gmail.com"));//t
+
+// System.out.println(Pattern.matches("^[A-Z0-9._%+-]+@[A-Z0-9.-]+[A-Z]{2,6}", "vaibhavi6@gmail.com"),Pattern.CASE_INSENSITIVE);//ERROR
+		Pattern p=Pattern.compile("^[A-Z0-9._%+-]+@[A-Z0-9.-]+[A-Z]{2,6}",Pattern.CASE_INSENSITIVE);
+		Matcher m=p.matcher("vaibhavi6@gmail.com");
+		boolean b=m.matches();
+		System.out.println(b);//t if case was not set to insensitive then it will be false
+	}
+}

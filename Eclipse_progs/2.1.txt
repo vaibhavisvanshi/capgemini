@@ -1,0 +1,22 @@
+package pack;
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		int a;
+		float b;
+		Scanner sc = new Scanner(System.in);
+		a = sc.nextInt();
+		b = sc.nextFloat();
+		float a_a = (float) (Math.pow(a, 2));
+		float b_b = (float) Math.pow(b, 2);
+		float result = a_a + 2 * a * b + b_b;
+		// float result = a * a + 2 * a * b + b * b;
+		System.out.println(("in float " + result));
+		int result1 = (int) (a * a + 2 * a * b + b * b);
+		System.out.println(("in int " + result1));
+	}
+
+}

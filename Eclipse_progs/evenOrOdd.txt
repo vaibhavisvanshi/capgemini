@@ -1,0 +1,24 @@
+package pack2;
+import java.util.Scanner;
+//JAN 31
+
+public class Main {
+
+	public static void main(String[] args) {
+		int n = 5;
+		if ((n / 2) == 0) {
+			System.out.println("even");
+
+		} else {
+			System.out.println("odd");
+		}
+	Scanner sc=new Scanner(System.in);
+		int k = sc.nextInt();
+		if ((k% 2) == 0) {
+			System.out.println("even");
+
+		} else {
+			System.out.println("odd");
+		}
+	}
+}
